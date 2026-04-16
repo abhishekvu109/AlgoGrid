@@ -1,0 +1,3 @@
+package com.abhishek.algogrid.input;
+
+public record IntersectionOfArraysWithDistinctInput(int[] arr1, int[] arr2) {}
