@@ -7,7 +7,13 @@ import com.abhishek.algogrid.strategies.AGProblemStrategy;
 public class FrequenciesInALimitedArrayBruteForce implements AGProblemStrategy<int[], int[]> {
     @Override
     public int[] solve(int[] input) {
-        throw new UnsupportedOperationException("TODO: Implement FrequenciesInALimitedArray - Brute Force");
+        int N = input.length;
+        int[] output = new int[N];
+        for (int i = 0; i < N; i++) {
+            int item = input[i];
+            output[item - 1] = output[item - 1] + 1;
+        }
+        return output;
     }
 
     @Override
@@ -17,11 +23,11 @@ public class FrequenciesInALimitedArrayBruteForce implements AGProblemStrategy<i
 
     @Override
     public String timeComplexity() {
-        return "O(?)";
+        return TimeComplexity.THETA_N;
     }
 
     @Override
     public String spaceComplexity() {
-        return "O(?)";
+        return SpaceComplexity.THETA_OF_ONE;
     }
 }

@@ -98,7 +98,6 @@ import com.abhishek.algogrid.problems.searching.IndexesOfSubarraySum.IndexesOfSu
 import com.abhishek.algogrid.problems.searching.Count1sInBinaryArray.Count1sInBinaryArray;
 import com.abhishek.algogrid.problems.searching.TwoRepeatedElements.TwoRepeatedElements;
 import com.abhishek.algogrid.problems.searching.MinimumNumberInSortedRotatedArray.MinimumNumberInSortedRotatedArray;
-import com.abhishek.algogrid.problems.searching.SmallestPositiveMissing.SmallestPositiveMissing;
 
 // ── Sorting ───────────────────────────────────────────────────────────────────
 import com.abhishek.algogrid.problems.sorting.CloserToSort.CloserToSort;
@@ -480,10 +479,10 @@ public class App {
 
         // ── Arrays (remaining) ────────────────────────────────────────────────
 //        new SubArrayWithAGivenSum().run(new SubArrayWithAGivenSumInput(new int[]{1,2,3,7,5}, 12));
-        new WhoHasTheMajority().run(new int[]{3, 3, 4, 2, 4, 4, 2, 4, 4});
+//        new WhoHasTheMajority().run(new int[]{3, 3, 4, 2, 4, 4, 2, 4, 4});
 //        new FrequenciesInALimitedArray().run(new int[]{2, 3, 3, 2, 5});
 //        new ArrayLeaders().run(new int[]{16, 17, 4, 3, 5, 2});
-//        new ReverseArrayInGroups().run(new ReverseArrayInGroupsInput(new int[]{1,2,3,4,5}, 3));
+        new ReverseArrayInGroups().run(new ReverseArrayInGroupsInput(new int[]{1,2,3,4,5}, 3));
 //        new RotateArray().run(new RotateArrayInput(new int[]{1,2,3,4,5,6}, 2));
 //        new BettingGame().run(new int[]{3, 3, 3, 2, 2});
 //        new MaximumOccuredInteger().run(new MaximumOccuredIntegerInput(new int[]{1,4,3,2}, new int[]{4,5,5,3}, 4));

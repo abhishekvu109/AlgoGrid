@@ -3,6 +3,7 @@ package com.abhishek.algogrid.strategies;
 import com.abhishek.algogrid.strategies.arrays.ArrayEndInsert.ArrayEndInsertBruteForce;
 import com.abhishek.algogrid.strategies.arrays.ArrayInsertAtIndex.ArrayInsertAtIndexBruteForce;
 import com.abhishek.algogrid.strategies.arrays.ArrayLeaders.ArrayLeadersBruteForce;
+import com.abhishek.algogrid.strategies.arrays.ArrayLeaders.ArrayLeadersLinearSolution;
 import com.abhishek.algogrid.strategies.arrays.BettingGame.BettingGameBruteForce;
 import com.abhishek.algogrid.strategies.arrays.CheckIfArrayIsSorted.CheckIfArrayIsSortedBruteForce;
 import com.abhishek.algogrid.strategies.arrays.CheckIfArrayIsSorted.CheckIfArrayIsSortedDivideAndConquer;
@@ -38,7 +39,6 @@ import com.abhishek.algogrid.strategies.arrays.RotateArray.RotateArrayBruteForce
 import com.abhishek.algogrid.strategies.arrays.RotateArray.RotateArrayCyclic;
 import com.abhishek.algogrid.strategies.arrays.SecondLargestElementInAnArray.SecondLargestInAnArrayLinearSearch;
 import com.abhishek.algogrid.strategies.arrays.SecondLargestElementInAnArray.SecondLargestInAnArrayUsingSorting;
-import com.abhishek.algogrid.strategies.arrays.SmallestPositiveMissing.SmallestPositiveMissingBruteForce;
 import com.abhishek.algogrid.strategies.arrays.SmallestPositiveMissing.SmallestPositiveMissingHashing;
 import com.abhishek.algogrid.strategies.arrays.StockBuyAndSell.StockBuyAndSellBruteForce;
 import com.abhishek.algogrid.strategies.arrays.StockBuyAndSell.StockBuyAndSellOptimal;
@@ -516,6 +516,7 @@ public class AGProblemStrategyFactory {
         registry.put("problem.arrays.whoHasTheMajority.mooresvoting", WhoHasTheMajorityMooresVoting::new);
         registry.put("problem.arrays.frequenciesInALimitedArray.bruteforce", FrequenciesInALimitedArrayBruteForce::new);
         registry.put("problem.arrays.arrayLeaders.bruteforce", ArrayLeadersBruteForce::new);
+        registry.put("problem.arrays.arrayLeaders.linearsolution", ArrayLeadersLinearSolution::new);
         registry.put("problem.arrays.reverseArrayInGroups.bruteforce", ReverseArrayInGroupsBruteForce::new);
         registry.put("problem.arrays.rotateArray.bruteforce", RotateArrayBruteForce::new);
         registry.put("problem.arrays.rotateArray.cyclic", RotateArrayCyclic::new);
