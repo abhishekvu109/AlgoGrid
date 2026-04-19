@@ -5,10 +5,29 @@ import com.abhishek.algogrid.constants.TimeComplexity;
 import com.abhishek.algogrid.strategies.AGProblemStrategy;
 import com.abhishek.algogrid.input.RotateArrayInput;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 public class RotateArrayCyclic implements AGProblemStrategy<RotateArrayInput, int[]> {
     @Override
     public int[] solve(RotateArrayInput input) {
-        throw new UnsupportedOperationException("TODO: Implement RotateArray - Cyclic Rotation");
+        int N = input.arr().length;
+        int d = input.d();
+        int[] arr = input.arr();
+        Deque<Integer> aux = new LinkedList<>();
+        if (d > N) {
+            d = d % N;
+        }
+        for (int i = 0; i < d; i++) {
+            aux.offerLast(arr[i]);
+        }
+        for (int i = N; i > d; i--) {
+            aux.offerFirst(arr[i - 1]);
+        }
+        for (int i = 0; i < N; i++) {
+            arr[i] = aux.peekFirst() == null ? 0 : aux.pollFirst();
+        }
+        return arr;
     }
 
     @Override
@@ -18,11 +37,11 @@ public class RotateArrayCyclic implements AGProblemStrategy<RotateArrayInput, in
 
     @Override
     public String timeComplexity() {
-        return "O(?)";
+        return TimeComplexity.THETA_N;
     }
 
     @Override
     public String spaceComplexity() {
-        return "O(?)";
+        return SpaceComplexity.BIG_OF_N;
     }
 }
